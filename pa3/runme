@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ $# = 2 ]; then
+   ./syntax_check $1 $2
+   if grep -q syntax_correct "$2"; then
+     ./parse $1 $2
+   fi
+else
+	echo "Two arguments <input_filename> <output_filename> required!"
+fi

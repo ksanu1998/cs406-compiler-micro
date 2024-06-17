@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ $# = 2 ]; then
+   ./parse $1 $2
+else
+	echo "Two arguments <input_filename> <output_filename> requried!"
+fi
